@@ -1,0 +1,186 @@
+---
+import { Image } from "astro:assets";
+
+const response = await fetch(
+  "https://dummyjson.com/products/category/smartphones"
+);
+const data = await response.json();
+console.log(data);
+---
+
+<!--HEADER-->
+<nav class="navbar" role="navigation">
+  <ul class="navList">
+    <li class="link logo">
+      <a href="#">Smartphones</a>
+    </li>
+  </ul>
+</nav>
+
+<!--PRODUCTOS-->
+{
+  data.products.map((prd: any) => (
+    <div class="card">
+      <div class="grid">
+        <div class="card purpleBorder">
+          <div class="card__image">
+            <img src={prd.images[0]} />
+          </div>
+          <h1 class="card_title">{prd.title}</h1>
+          <h2>Descripction:</h2>
+          <p class="card_text"> {prd.description}</p>
+        </div>
+      </div>
+    </div>
+  ))
+}
+
+<!--FOOTER-->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-bottom">
+      <p>
+        &copy; 2025 Smartphones todos los derechos reservados. | Luis García
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!--ESTILOS-->
+<style>
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  .navbar {
+    width: 100%;
+    height: 7rem;
+    border-bottom: 1px solid #a231c815;
+    box-shadow: 1px 1px 9px 1px #6d15a46a;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .navbar .navList {
+    width: 100%;
+    height: 100%;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .link {
+    flex-grow: 1;
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+  }
+
+  .link > a {
+    text-decoration: none;
+    color: #8a5cea;
+  }
+  .link > a:hover {
+    color: #3e0da6;
+  }
+  .logo {
+    flex-grow: 10;
+    font-family: "Raleway", sans-serif;
+    font-size: 3.4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ------- Container ------- */
+
+  .title {
+    font-size: 2.5rem;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 1.4rem;
+  }
+
+  .grid {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    justify-content: center;
+    position: relative;
+    width: 25rem;
+    height: 40rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-bottom: 30px;
+  }
+
+  .card_title {
+    font-size: 2rem;
+    padding: 5px 0;
+  }
+  .card_text {
+    font-weight: 100;
+    font-size: 1.3rem;
+    opacity: 0.6;
+    padding: 5px 0;
+  }
+
+  .card__image img {
+    width: 150px;
+    height: 160px;
+  }
+  /* --------- Utility Classes --------- */
+  .italic {
+    font-style: italic;
+  }
+
+  .purpleBorder {
+    border-top: 4px solid #8a5cea;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.29);
+  }
+
+  /* --------- FOOTER --------- */
+
+  .footer {
+    background-color: #8a5cea;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+</style>
