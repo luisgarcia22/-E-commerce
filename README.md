@@ -1,48 +1,23 @@
-# Astro Starter Kit: Basics
+# 📱 Landing Page de Smartphones
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este proyecto es una **Landing Page responsiva** que consume una API de teléfonos **smartphones**, mostrando cada dispositivo de forma descriptiva mediante **cards** visuales y modernas. La interfaz está construida con **Astro**, y utiliza **Node.js** para la gestión del backend. El diseño emplea **HTML**, **CSS**, **Flexbox** y **Grid**, con especial atención a la adaptación en **3 breakpoints (mobile, tablet y desktop)**.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Tecnologías utilizadas
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- 🌟 [Astro](https://astro.build/) - Framework para sitios rápidos y modernos
+- 🟢 [Node.js](https://nodejs.org/) - Entorno de ejecución para el backend
+- 🧱 HTML5 y CSS3 - Lenguajes de marcado y estilos
+- 📐 Flexbox y CSS Grid - Para la maquetación responsiva
+- 🎨 Diseño responsive - Adaptado a mobile, tablet y desktop
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 📷 Funcionalidades principales
 
-## 🚀 Project Structure
+- ✅ Consumo de una API de smartphones
+- ✅ Renderizado de cada teléfono en una card individual con detalles
+- ✅ Maquetación limpia y moderna
+- ✅ Diseño 100% responsivo con 3 breakpoints:
+  - 📱 Mobile
+  - 💊 Tablet
+  - 🖥️ Desktop
 
-Inside of your Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
